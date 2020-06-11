@@ -15,7 +15,7 @@ function getHex() {
 
 btn.addEventListener("click", function(){
     var color = getHex();
-    console.log(color);
+    //console.log(color);
     document.body.style.backgroundColor = color;
     printer.innerHTML = color;
 });
