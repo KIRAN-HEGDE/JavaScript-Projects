@@ -5,8 +5,8 @@ const printer = document.getElementById('bg-color-printer');
 function getRandomIndex(){
     return Math.floor(Math.random() * colors.length);
 }
-console.log(getRandomIndex());
-console.log(btn);
+//console.log(getRandomIndex());
+//console.log(btn);
 
 btn.addEventListener("click", function(){
     index = getRandomIndex();
