@@ -1,0 +1,99 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.container {
+  height: 730px;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #110c11;
+  display: flex;
+  align-items: center;
+}
+
+.cpad {
+  margin: 0 auto;
+  height: 650px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 4px;
+  overflow: hidden;
+}
+
+.history, .screen {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.screen {
+  align-items: flex-end;
+  font-size: 50px;
+}
+
+.history {
+  align-items: center;
+  font-size: 30px;
+}
+
+.buttons-holder {
+  width: 100%;
+  height: 60%;
+  background-color: #030200;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  overflow: hidden;
+}
+
+.keys::selection {
+  color: none;
+  background: none;
+}
+
+.keys {
+  cursor: pointer;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  border: 1px solid #dee3de;
+}
+
+.keys:nth-child(4n) {
+  background-color: #4B0082;
+  border-right: none;
+}
+
+.keys:nth-child(1), .keys:nth-child(2), .keys:nth-child(3) {
+  background: #ff2400;
+}
+
+.keys:nth-child(4n+1) {
+  border-left: none;
+}
+
+.keys:nth-child(17), .keys:nth-child(18), .keys:nth-child(19),
+.keys:nth-child(20) {
+  border-bottom: none;
+}
+
+.keys:hover {
+  background-color: #6699cc;
+}
+
+#equals {
+  background-color: #ffef00;
+  color: black;
+}
+
+.animate {
+  transform: translateY(-100px) scale(0);
+  transition: transform 1s ease-in;
+}
+
+/*# sourceMappingURL=style.css.map */
