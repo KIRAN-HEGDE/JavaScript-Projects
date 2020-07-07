@@ -81,9 +81,9 @@ const dotBtn = document.querySelector('#dot');
 dotBtn.addEventListener('click', function () {
     let screenVal = getScreen();
     if (screenVal) {
-        console.log(screenVal.indexOf('.'));
+        //console.log(screenVal.indexOf('.'));
         if (screenVal.indexOf('.') == -1) {
-            console.log(screenVal + dotBtn.innerText.trim());
+           // console.log(screenVal + dotBtn.innerText.trim());
             setScreen(screenVal + dotBtn.innerText.trim());
         }
     }
@@ -95,10 +95,10 @@ let operandRegEx = /\d+$/;
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener('click', function () {
         let screenVal = getScreen();
-        console.log(screenVal);
+        //console.log(screenVal);
         if (screenVal) {
-            console.log(operatorRegEx.test(screenVal));
-            console.log(operandRegEx.test(screenVal));
+            //console.log(operatorRegEx.test(screenVal));
+            //console.log(operandRegEx.test(screenVal));
             if (operatorRegEx.test(screenVal) && !operandRegEx.test(screenVal)) {
                 setScreen(screenVal.substring(0,screenVal.length-1)+ operators[i].innerText.trim());
             } else {
@@ -112,25 +112,20 @@ const equals = document.querySelector('#equals');
 equals.addEventListener('click', function () {
     let screenVal = getScreen();
     if (screenVal) {
-        //animate();
         setHistory(screenVal);
         let val = screenVal;
         val = val.replace(/\u002B/g, '+');
         val = val.replace(/\u2212/g, '-');
         val = val.replace(/\u00F7/g , '/');
         val = val.replace(/\u00D7/g, '*');
-        console.log(val);
+        //console.log(val);
         let result = eval(val);
         if (Number.isFinite(result)) {
             setScreen(result);
         } else {
             setScreen(0);
         }
-        //animate();
+       
     }
 });
 
-/*function animate() {
-    let textSpan = document.querySelector('#screen-text');
-    textSpan.classList.toggle('animate');
-}*/
