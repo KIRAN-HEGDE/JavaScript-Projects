@@ -2,3 +2,4 @@
 ## Project-1: Color Picker
 ![](https://github.com/KIRAN-HEGDE/JavaScript-Projects/blob/master/Color-Picker/gifs/colorpicker.gif)
 ## Project-2: Calculator
+![](https://github.com/KIRAN-HEGDE/JavaScript-Projects/blob/master/Calculator/gif/calculator.gif)
